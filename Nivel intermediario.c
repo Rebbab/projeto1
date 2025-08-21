@@ -7,8 +7,9 @@
 //Pequeno detalhe sobre os inputs: o nome da cidade nao aceita nomes compostos pela limitação da função scanf que foi pedida.
 //e para área espera-se que o valor seja em KM² 
 
-int populacao1, populacao2, pt_turisticos1, pt_turisticos2;
-float area1, area2, pib1, pib2;
+long int populacao1, populacao2; 
+int pt_turisticos1, pt_turisticos2;
+float area1, area2, pib1, pib2, super1, super2;
 float densidade1, densidade2, percapta1, percapta2;
 char cidade1[30], codigo_carta1[5], cidade2[30], codigo_carta2[5];
 
@@ -67,6 +68,10 @@ float Operacoes(){
 
     percapta1 = pib1 / populacao1;
     percapta2 = pib2 / populacao2;
+
+    super1 = area1 + pib1 + populacao1 + pt_turisticos1 + (1/densidade1) + percapta1;
+    super2 = area2 + pib2 + populacao2 + pt_turisticos2 + (1/densidade2) + percapta2;
+
 }
 
 
@@ -81,7 +86,8 @@ void print(){
     printf("Quantidade de pontos turisticos na cidade: %d \n", pt_turisticos1);
     printf("Densidade populacional: %f \n", densidade1);
     printf("PIB per capta: %f \n", percapta1);
-    
+    printf("Super: %f \n", super1);
+
     //resultado da carta 2
     
     printf("CARTA 2:\n");
@@ -93,6 +99,20 @@ void print(){
     printf("Quantidade de pontos turisticos na cidade: %d \n", pt_turisticos2);
     printf("Densidade populacional: %f \n", densidade2);
     printf("PIB per capta: %f \n", percapta2);
+    printf("Super: %f \n", super2);
+
+
+    //comparação
+    printf("comparacao de populacao: %d\n", populacao1 > populacao2);
+    printf("comparacao de area: %f\n", area1 > area2);
+    printf("comparacao de pib: %f\n", pib1 > pib2);
+    printf("comparacao de pontos turisticos: %d\n", pt_turisticos1 > pt_turisticos2);
+    printf("comparacao de densidade populacional: %f\n", densidade1 > densidade2);
+    printf("comparacao de pib per capita: %f\n", percapta1 > percapta2);
+    printf("comparacao de Super poder: %f\n", super1 > super2);
+    
+
+
 }
 
 
