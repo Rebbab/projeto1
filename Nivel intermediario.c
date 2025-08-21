@@ -104,12 +104,12 @@ void print(){
 
     //comparação
     printf("comparacao de populacao: %d\n", populacao1 > populacao2);
-    printf("comparacao de area: %f\n", area1 > area2);
-    printf("comparacao de pib: %f\n", pib1 > pib2);
+    printf("comparacao de area: %d\n", area1 > area2);
+    printf("comparacao de pib: %d\n", pib1 > pib2);
     printf("comparacao de pontos turisticos: %d\n", pt_turisticos1 > pt_turisticos2);
-    printf("comparacao de densidade populacional: %f\n", densidade1 > densidade2);
-    printf("comparacao de pib per capita: %f\n", percapta1 > percapta2);
-    printf("comparacao de Super poder: %f\n", super1 > super2);
+    printf("comparacao de densidade populacional: %d\n", densidade1 > densidade2);
+    printf("comparacao de pib per capita: %d\n", percapta1 > percapta2);
+    printf("comparacao de Super poder: %d\n", super1 > super2);
     
 
 
