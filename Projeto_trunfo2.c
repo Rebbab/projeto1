@@ -9,6 +9,7 @@ int pt_turisticos1, pt_turisticos2;
 float area1, area2, pib1, pib2, super1, super2;
 float densidade1, densidade2, percapta1, percapta2;
 char cidade1[30], codigo_carta1[5], cidade2[30], codigo_carta2[5];
+int opcao;
 
 void Input(){
     //coleta de dados carta 1
@@ -104,17 +105,54 @@ void print(){
 
 
 void comparacao(){
-    if (populacao1 > populacao2)
+    //print do "menu" por assim dizer
+    printf("Selecione o atributo que deseja comparar \n");
+    printf("Area da cidade - 1 \n");
+    printf("PIB da cidade - 2 \n");
+    printf("Populacao da cidade - 3 \n");
+    printf("Quantidade de pontos turisticos na cidade - 4 \n");
+    printf("Densidade populacional - 5 \n");
+    printf("PIB per capta - 6 \n");
+    printf("Super - 7 \n");
+    printf("Opção desejada: ");
+    scanf("%d", &opcao);
+    
+    //Seletor de opções
+    switch (opcao)
     {
-        printf("A carta 1 Venceu \n");
-    }   
-    else if (populacao1 == populacao2 )
-    {
-        printf("Empate \n");
+    case 1:
+        /* code */
+        break;
+
+    case 2:
+        /* code */
+        break;
+
+    case 3:
+        /* code */
+        break;
+
+    case 4:
+        /* code */
+        break;
+
+    case 5:
+        /* code */
+        break;
+
+    case 6:
+        /* code */
+        break;
+    
+ 
+    case 7:
+        /* code */
+        break;
+    
+    default:
+        printf("Nenhuma opção selecionada \n");
+        break;
     }
-    else{
-        printf("A carta 2 venceu");
-    }    
     
 }
 
