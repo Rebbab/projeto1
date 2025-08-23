@@ -74,6 +74,7 @@ float Operacoes(){
 
 void print(){
     //resultado da carta 1
+    printf("--------------------------------\n");
     printf("CARTA 1:\n");
     printf("codigo da carta: %s \n", codigo_carta1);
     printf("nome da cidade: %s \n", cidade1);
@@ -85,6 +86,7 @@ void print(){
     printf("PIB per capta: %.2f \n", percapta1);
     printf("Super: %.2f \n", super1);
 
+    printf("--------------------------------\n");
     //resultado da carta 2
     
     printf("CARTA 2:\n");
@@ -98,7 +100,7 @@ void print(){
     printf("PIB per capta: %.2f \n", percapta2);
     printf("Super: %.2f \n", super2);
 
-    
+    printf("--------------------------------\n");
 
 
 }
@@ -121,32 +123,74 @@ void comparacao(){
     switch (opcao)
     {
     case 1:
-        /* code */
+        if (area1 > area2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
 
     case 2:
-        /* code */
+        if (pib1 > pib2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
 
     case 3:
-        /* code */
+        if (populacao1 > populacao2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
 
     case 4:
-        /* code */
+        if (pt_turisticos1 > pt_turisticos2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
 
     case 5:
-        /* code */
+        if (densidade1 < densidade2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
 
     case 6:
-        /* code */
+        if (percapta1 > percapta2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
     
  
     case 7:
-        /* code */
+        if (super1 > super2)
+        {
+            printf("Carta 1 venceu!");
+        }else{
+            printf("Carta 2 venceu!");
+        }
+        
         break;
     
     default:
