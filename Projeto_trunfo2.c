@@ -1,7 +1,8 @@
 #include <stdio.h>
     
 // Desafio Super Trunfo - Países
-// Tema 2 - 
+// Tema 3
+// Segue com as mesmas limitações do anterior mas agora tem o menu
 
 
 long int populacao1, populacao2; 
@@ -107,7 +108,7 @@ void print(){
 
 
 void comparacao(){
-    //print do "menu" por assim dizer
+    //exibição do menu
     printf("Selecione o atributo que deseja comparar \n");
     printf("Area da cidade - 1 \n");
     printf("PIB da cidade - 2 \n");
@@ -119,7 +120,7 @@ void comparacao(){
     printf("Opção desejada: ");
     scanf("%d", &opcao);
     
-    //Seletor de opções
+    //Casos de opçao
     switch (opcao)
     {
     case 1:
