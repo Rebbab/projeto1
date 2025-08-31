@@ -1,50 +1,85 @@
 #include <stdio.h>
 
-int main(){
-
-//quantidade de  movimentos por peça
-int moverainha = 8;
-int movebispo = 5;
-int movetorre = 5;
-int movecavalo = 1;
-
-//Movimentos da rainha
-printf("******Movimento da Rainha******\n");
-for (int i = 1; i <= moverainha; i++)
-{
-    printf("Esquerda\n");
+//função da torre
+void movertorre(int casas){
+    if (casas==0) return;
+     printf("Direita\n");
+     movertorre(casas - 1);   
 }
 
 
-//Movimentos do bispo
-printf("******Movimento do Bispo******\n");
-int i = 1;
-while (i <= movebispo)
-{
-    printf("Cima e Cireita\n");
-    i++;
+//função da rainha
+void moverrainha (int casas){
+    if (casas==0) return;
+     printf("Esquerda\n");
+     moverrainha(casas - 1);   
+
 }
+// para torre e rainha funções recurssivas.
 
-//Movimentos da torre
-printf("******Movimento da Torre******\n");
-int j = 1;
+//função do bispo
+void moverbispo(int casas){
+    if (casas == 0) return;
+    
 
-do
-{
-    printf("Direita\n");
-    j++;
-} while (j <= movetorre);
-
-
-
-//Movimentos do cavalo
-printf("******Movimento da Cavalo******\n");
-while (movecavalo--){
-    for (int i = 0; i < 2; i++){
-        printf("Cima\n");
+    for (int i = 0; i < 1; i++) { 
+        for (int j = 0; j < 1; j++) {
+            printf("Cima, Direita\n");
+        }
     }
-    printf("direita\n");
+    
+    moverbispo(casas - 1);
+
 }
+//para o bispo, loop aninhado além da recurssão.
+
+
+
+
+
+//função do cavalo
+void movercavalo(int movimentos){
+    int movCima = 2;
+    int movDireita = 1;
+
+
+    for (int i = 0; i < movimentos; i++) {
+        for (int cima = 0; cima < movCima; cima++) {
+            printf("Cima\n");
+            if (cima == 1 && movDireita == 1) {
+                //moveu pra cima, agora direita
+                for (int dir = 0; dir < movDireita; dir++) {
+                    if (dir == 0) {
+                        printf("Direita\n");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+//para o cavalo, loops aninhados e continue/break
+
+
+int main(){
+//variaveis de quantidade de movimento por peça    
+    int qtdmovtorre = 4;
+    int qtdmovrainha = 4;
+    int qtdmovebispo = 4;
+    int qtdmovecavalo = 1;
+
+//chamando as funções e organizando a saida
+    printf("***Movimento Torre***\n");
+    movertorre(qtdmovtorre);
+
+    printf("***Movimento Torre***\n");
+    movertorre(qtdmovrainha);
+
+    printf("***Movimento Bispo***\n");
+    moverbispo(qtdmovebispo);
+
+    printf("***Movimento Cavalo***\n");
+    movercavalo(qtdmovecavalo);
 
 
     
