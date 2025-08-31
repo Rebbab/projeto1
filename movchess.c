@@ -6,6 +6,7 @@ int main(){
 int moverainha = 8;
 int movebispo = 5;
 int movetorre = 5;
+int movecavalo = 1;
 
 //Movimentos da rainha
 printf("******Movimento da Rainha******\n");
@@ -38,7 +39,13 @@ do
 
 //Movimentos do cavalo
 printf("******Movimento da Cavalo******\n");
-printf("under construction...\n");
+while (movecavalo--){
+    for (int i = 0; i < 2; i++){
+        printf("Cima\n");
+    }
+    printf("direita\n");
+}
+
 
     
     return 0;
