@@ -33,10 +33,6 @@ void moverbispo(int casas){
 }
 //para o bispo, loop aninhado além da recurssão.
 
-
-
-
-
 //função do cavalo
 void movercavalo(int movimentos){
     int movCima = 2;
@@ -73,7 +69,7 @@ int main(){
     movertorre(qtdmovtorre);
 
     printf("***Movimento Torre***\n");
-    movertorre(qtdmovrainha);
+    moverrainha(qtdmovrainha);
 
     printf("***Movimento Bispo***\n");
     moverbispo(qtdmovebispo);
