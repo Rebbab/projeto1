@@ -43,7 +43,6 @@ void movercavalo(int movimentos){
         for (int cima = 0; cima < movCima; cima++) {
             printf("Cima\n");
             if (cima == 1 && movDireita == 1) {
-                //moveu pra cima, agora direita
                 for (int dir = 0; dir < movDireita; dir++) {
                     if (dir == 0) {
                         printf("Direita\n");
